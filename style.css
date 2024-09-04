@@ -1,0 +1,135 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+h1 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+    animation: slideDown 0.8s ease-out; /* Slide-down animation */
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    animation: fadeInUp 0.5s ease-out; /* Fade-in from bottom */
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    animation: pulse 2s infinite; /* Pulse animation */
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.03);
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s;
+    animation: bounceIn 1s ease-in; /* Bounce-in animation */
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .container {
+    background-color: #1e1e1e;
+}
+
+.dark-mode input[type="text"], .dark-mode select {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+.dark-mode .button {
+    background-color: #6200ea;
+}
+
+.dark-mode .button:hover {
+    background-color: #3700b3;
+}
+
+.dark-mode .result {
+    color: #e0e0e0;
+}
+
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    60% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+}
